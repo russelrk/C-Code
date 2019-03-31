@@ -11,6 +11,7 @@
 
 using namespace std;
 
+// Simple Binary Search Tree Construct
 template <class T>
 struct Node{
 public:
@@ -35,9 +36,12 @@ public:
     Node* right;
 };
 
+// Binary Tree Class 
 template <class T>
 class BST: public Node<T> {
 public:
+    
+    // add val to BST helper
     void add(T val){
         if(root){
             this->addHelper(root, val);
@@ -45,14 +49,21 @@ public:
             this->root = new Node<T>(val);
         }
     }
+    
+    // depth first search helper
     void dfs(int a=0){
+        // a = 0 inorder
+        // a = 1 pre order 
+        // a = 2 post order
         this->dfsHelper(root, a);
     }
     
+    // breadth first search helper 
     void bfs(){
         this->bfsHelper(root);
     }
     
+    // check if BST or Not
     void isBST(){
 
         Node<T>* l = NULL;
@@ -62,6 +73,7 @@ public:
         else cout << "Not BST" << endl;
     }
     
+    // search if val exist in BST or not helper 
     void searchBST(int val){
         if(!root) cout << "empty tree" << endl;
         bool index = this->searchBSTHelper(root, val);
@@ -71,6 +83,7 @@ public:
             cout << "Not Found " << endl;
     }
     
+    // print leaf in binary tree helper 
     void printLeaf(){
         this->printLeafHelper(root);
     }
