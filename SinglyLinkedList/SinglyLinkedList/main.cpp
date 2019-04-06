@@ -3,7 +3,7 @@
 //  SinglyLinkedList
 //
 //  Created by Rafiul Rasel on 8/9/18.
-//  Copyright © 2019 Rafiul Rasel. All rights reserved.
+//  Copyright © 2018 Rafiul Rasel. All rights reserved.
 //
 
 #include <iostream>
